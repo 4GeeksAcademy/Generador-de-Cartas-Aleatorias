@@ -20,4 +20,30 @@ window.onload = function() {
 
   topSuit.innerHTML = symbol;
   bottomSuit.innerHTML = symbol;
+
+  const numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
+
+  const generateNumber = () => {
+    const randomIndexNumber = Math.floor(Math.random() * numbers.length);
+    return numbers[randomIndexNumber];
+  };
+
+  const numeral = generateNumber();
+  const count = document.querySelector(".number");
+
+  count.innerHTML = numeral;
 };
